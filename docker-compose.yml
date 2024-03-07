@@ -1,0 +1,11 @@
+version: '2'
+services:
+  ping-server:
+    container_name: ping-server
+    build: ./docker-ping-server
+    image: ping-server:latest
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./api:/app
+      - ./app/node_modules
